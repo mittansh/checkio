@@ -1,0 +1,15 @@
+def prodofNumDigits(a:int)->int:
+    product=1
+    if (a==0):
+        product=1
+    while (a != 0): 
+        if a % 10 != 0:
+            product *=  (a % 10)    
+        a = a // 10
+    return product
+    
+            
+assert prodofNumDigits(123405) == 120
+assert prodofNumDigits(999) == 729
+assert prodofNumDigits(1000) == 1
+assert prodofNumDigits(1111) == 1
